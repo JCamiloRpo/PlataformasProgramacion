@@ -11,7 +11,7 @@ public class NumeroPrimo417 {
 			}
 			if(p <= 1)con++;
 		}
-		System.out.print("Primo "+i+" en la posicion "+ con);
+		System.out.print("Primo "+i+" en la posicion "+ (--con));
 	}
 	
 	
