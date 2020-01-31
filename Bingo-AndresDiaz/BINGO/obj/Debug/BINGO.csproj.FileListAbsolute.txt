@@ -1,0 +1,7 @@
+C:\Users\andre\source\repos\BINGO\bin\Debug\BINGO.exe.config
+C:\Users\andre\source\repos\BINGO\bin\Debug\BINGO.exe
+C:\Users\andre\source\repos\BINGO\bin\Debug\BINGO.pdb
+C:\Users\andre\source\repos\BINGO\obj\Debug\BINGO.csprojAssemblyReference.cache
+C:\Users\andre\source\repos\BINGO\obj\Debug\BINGO.csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\BINGO\obj\Debug\BINGO.exe
+C:\Users\andre\source\repos\BINGO\obj\Debug\BINGO.pdb
