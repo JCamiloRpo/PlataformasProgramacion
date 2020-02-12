@@ -1,0 +1,7 @@
+7
+0. pop 0
+0. mac 0
+0. mol 1
+0. no 2
+0. muan 2
+4. vayet 4999

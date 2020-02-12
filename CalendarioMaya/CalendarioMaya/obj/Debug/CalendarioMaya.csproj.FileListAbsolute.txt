@@ -1,0 +1,6 @@
+C:\Users\wilde\Documents\Visual\CalendarioMaya\CalendarioMaya\bin\Debug\CalendarioMaya.exe.config
+C:\Users\wilde\Documents\Visual\CalendarioMaya\CalendarioMaya\bin\Debug\CalendarioMaya.exe
+C:\Users\wilde\Documents\Visual\CalendarioMaya\CalendarioMaya\bin\Debug\CalendarioMaya.pdb
+C:\Users\wilde\Documents\Visual\CalendarioMaya\CalendarioMaya\obj\Debug\CalendarioMaya.csprojAssemblyReference.cache
+C:\Users\wilde\Documents\Visual\CalendarioMaya\CalendarioMaya\obj\Debug\CalendarioMaya.exe
+C:\Users\wilde\Documents\Visual\CalendarioMaya\CalendarioMaya\obj\Debug\CalendarioMaya.pdb
