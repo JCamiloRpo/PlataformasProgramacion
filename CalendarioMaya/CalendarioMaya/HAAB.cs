@@ -30,14 +30,17 @@ namespace CalendarioMaya
 
         public Tzolkin toTzolkin()
         {
-            int dia,año,nromes = index(Mes);
+            int dia=0,año=-1,nromes = index(Mes), total = Año * 365 + nromes * 20 + NroDia; ;
             string nom;
-            if (NroDia < 13)
-                dia = NroDia + 1;
-            else
-                dia = NroDia - 12;
+            for(int i = 0; i <= total; i++)
+            {
+                dia++;
+                if (dia > 13)
+                    dia = 1;
+                if (i % 260 == 0)
+                    año++;
+            }
             nom = Tzolkin.Nombres1[NroDia];
-            año = (int)Math.Round(((double)(Año*365 + nromes*20)/ (double)260),0);
             return new Tzolkin(dia, nom, año);
         }
 
