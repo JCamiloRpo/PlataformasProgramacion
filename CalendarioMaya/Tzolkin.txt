@@ -1,7 +1,0 @@
-7
-1 imix 0
-1 imix 1
-1 imix 2
-1 imix 3
-1 imix 4
-5 chicchan 7018
