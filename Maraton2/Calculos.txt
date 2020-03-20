@@ -1,0 +1,57 @@
+Sistema de Irrigación # 1
+Configuración de válvulas # 1
+Salida # 1 : flujo 240 galones/min
+Salida # 2 : flujo 0 galones/min
+Salida # 3 : flujo 73 galones/min
+Configuración de válvulas # 2
+Salida # 1 : flujo 200 galones/min
+Salida # 2 : flujo 113 galones/min
+Salida # 3 : flujo 0 galones/min
+
+Sistema de Irrigación # 2
+Configuración de válvulas # 1
+Salida # 1 : flujo 0 galones/min
+Salida # 2 : flujo 300 galones/min
+Salida # 3 : flujo 0 galones/min
+Salida # 4 : flujo 0 galones/min
+Configuración de válvulas # 2
+Salida # 1 : flujo 100 galones/min
+Salida # 2 : flujo 0 galones/min
+Salida # 3 : flujo 200 galones/min
+Salida # 4 : flujo 0 galones/min
+Configuración de válvulas # 3
+Salida # 1 : flujo 100 galones/min
+Salida # 2 : flujo 0 galones/min
+Salida # 3 : flujo 200 galones/min
+Salida # 4 : flujo 0 galones/min
+
+Sistema de Irrigación # 3
+Configuración de válvulas # 1
+Salida # 1 : flujo 0 galones/min
+Salida # 2 : flujo 100 galones/min
+Salida # 3 : flujo 200 galones/min
+Salida # 4 : flujo 300 galones/min
+Salida # 5 : flujo 400 galones/min
+Salida # 6 : flujo 500 galones/min
+Configuración de válvulas # 2
+Salida # 1 : flujo 100 galones/min
+Salida # 2 : flujo 200 galones/min
+Salida # 3 : flujo 300 galones/min
+Salida # 4 : flujo 400 galones/min
+Salida # 5 : flujo 500 galones/min
+Salida # 6 : flujo 0 galones/min
+Configuración de válvulas # 3
+Salida # 1 : flujo 0 galones/min
+Salida # 2 : flujo 300 galones/min
+Salida # 3 : flujo 0 galones/min
+Salida # 4 : flujo 700 galones/min
+Salida # 5 : flujo 0 galones/min
+Salida # 6 : flujo 500 galones/min
+Configuración de válvulas # 4
+Salida # 1 : flujo 100 galones/min
+Salida # 2 : flujo 0 galones/min
+Salida # 3 : flujo 500 galones/min
+Salida # 4 : flujo 0 galones/min
+Salida # 5 : flujo 900 galones/min
+Salida # 6 : flujo 0 galones/min
+

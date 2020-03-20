@@ -1,0 +1,6 @@
+C:\Users\wilde\Documents\Visual\Maraton2\Maraton2\bin\Debug\Maraton2.exe.config
+C:\Users\wilde\Documents\Visual\Maraton2\Maraton2\bin\Debug\Maraton2.exe
+C:\Users\wilde\Documents\Visual\Maraton2\Maraton2\bin\Debug\Maraton2.pdb
+C:\Users\wilde\Documents\Visual\Maraton2\Maraton2\obj\Debug\Maraton2.csprojAssemblyReference.cache
+C:\Users\wilde\Documents\Visual\Maraton2\Maraton2\obj\Debug\Maraton2.exe
+C:\Users\wilde\Documents\Visual\Maraton2\Maraton2\obj\Debug\Maraton2.pdb
