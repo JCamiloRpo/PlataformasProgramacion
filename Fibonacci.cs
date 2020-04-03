@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +12,7 @@ namespace Fibonacci
         {
             Console.WriteLine("Ingrese numero a obtener secuencia Fibonacci");
             Number number = new Number(Convert.ToInt32(Console.ReadLine()));
-            foreach (int i in number.getFibonacci())
+            foreach (long i in number.getFibonacci())
                 Console.Write(i + " ");
             Console.WriteLine("");
             Console.ReadKey();
@@ -21,23 +21,23 @@ namespace Fibonacci
 
     class Number
     {
-        int n;
+        long n;
 
-        public Number(int n)
+        public Number(long n)
         {
             this.n = n;
         }
 
-        public int N { get => n; set => n = value; }
+        public long N { get => n; set => n = value; }
 
-        public int[] getFibonacci()
+        public long[] getFibonacci()
         {
-            int[] sequence = new int[n+1];
-            int num=0;
-            for(int i=0; i < n+1; i++)
+            long[] sequence = new long[n];
+            long num =0;
+            for(int i=1,j=(int)(n-1); i < n+1; i++)
             {
-                num = (int) ((Math.Pow(((1 + Math.Sqrt(5)) / 2), i) - Math.Pow(((1 - Math.Sqrt(5)) / 2), i)) / Math.Sqrt(5) );
-                sequence[i] = num;
+                num = (long) ((Math.Pow(((1 + Math.Sqrt(5)) / 2), i) - Math.Pow(((1 - Math.Sqrt(5)) / 2), i)) / Math.Sqrt(5) );
+                sequence[j--] = num;
             }
             return sequence;
         }
