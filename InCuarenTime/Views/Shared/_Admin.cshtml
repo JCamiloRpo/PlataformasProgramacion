@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/assets/admin.css" />
+    <link rel="stylesheet" href="~/assets/style.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" >
+</head>
+<body class="app">
+    <div id='loader'>
+        <div class="spinner"></div>
+    </div>
+    <div>
+        <!-- #Left Sidebar ==================== -->
+        <div class="sidebar bgc-grey-900">
+            <div class="sidebar-inner">
+                <!-- ### $Sidebar Header ### -->
+                <div class="sidebar-logo ">
+                    <div class="peers ai-c fxw-nw">
+                        <div class="peer peer-greed">
+                            <a class="sidebar-link td-n" asp-area="" asp-controller="Home" asp-action="Index">
+                                <div class="peers ai-c fxw-nw">
+                                    <div class="peer">
+                                        <div class="logo">
+                                            <img src="~/assets/static/images/logo.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="peer peer-greed">
+                                        <h5 class="lh-1 mB-0 text-white">InCurenTime</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="peer">
+                            <div class="mobile-toggle sidebar-toggle">
+                                <a href="" class="td-n">
+                                    <i class="ti-arrow-circle-left"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ### $Sidebar Menu ### -->
+                <ul class="sidebar-menu scrollable pos-r">
+                    <li class="nav-item mT-30 actived">
+                        <a class="sidebar-link" asp-area="" asp-controller="Home" asp-action="Index">
+                            <span class="icon-holder">
+                                <i class="c-deep-purple-500 ti-home"></i>
+                            </span>
+                            <span class="title">Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle" href="javascript:void(0);">
+                            <span class="icon-holder">
+                                <i class="c-purple-500 ti-layout-list-thumb"></i>
+                            </span>
+                            <span class="title">Generales</span>
+                            <span class="arrow">
+                                <i class="ti-angle-right"></i>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class='sidebar-link' asp-area="" asp-controller="Paises" asp-action="Index">Paises</a>
+                            </li>
+                            <li>
+                                <a class='sidebar-link' asp-area="" asp-controller="Departamentos" asp-action="Index">Departamentos</a>
+                            </li>
+                            <li>
+                                <a class='sidebar-link' asp-area="" asp-controller="Ciudades" asp-action="Index">Ciudades</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle" href="javascript:void(0);">
+                            <span class="icon-holder">
+                                <i class="c-blue-500 ti-map"></i>
+                            </span>
+                            <span class="title">Usuarios</span>
+                            <span class="arrow">
+                                <i class="ti-angle-right"></i>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class='sidebar-link' asp-area="" asp-controller="Unidad_Residenciales" asp-action="Index">Unidades Residenciales</a>
+                            </li>
+                            <li>
+                                <a class='sidebar-link' asp-area="" asp-controller="Apartamentos" asp-action="Index">Apartamentos</a>
+                            </li>
+                            <li>
+                                <a class='sidebar-link' asp-area="" asp-controller="Propietarios" asp-action="Index">Propietarios</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle" href="javascript:void(0);">
+                            <span class="icon-holder">
+                                <i class="c-pink-500 ti-files"></i>
+                            </span>
+                            <span class="title">Tiendas</span>
+                            <span class="arrow">
+                                <i class="ti-angle-right"></i>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class='sidebar-link' asp-area="" asp-controller="Productos" asp-action="Index">Productos</a>
+                            </li>
+                            <li>
+                                <a class='sidebar-link' asp-area="" asp-controller="Mercados" asp-action="Index">Mercados</a>
+                            </li>
+                            <li>
+                                <a class='sidebar-link' asp-area="" asp-controller="Compras" asp-action="Index">Compras</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- #Main ============================ -->
+        <div class="page-container">
+            <!-- ### $Topbar ### -->
+            <div class="header navbar bgc-grey-900">
+                <div class="header-container">
+                    <ul class="nav-left">
+                        <li>
+                            <a id='sidebar-toggle' class="sidebar-toggle" href="javascript:void(0);">
+                                <i class="ti-menu"></i>
+                            </a>
+                        </li>
+                        <li class="search-box">
+                            <a class="search-toggle no-pdd-right" href="javascript:void(0);">
+                                <i class="search-icon ti-search pdd-right-10"></i>
+                                <i class="search-icon-close ti-close pdd-right-10"></i>
+                            </a>
+                        </li>
+                        <li class="search-input">
+                            <input class="form-control" type="text" placeholder="Search...">
+                        </li>
+                    </ul>
+                    <ul class="nav-right">
+                        <li class="notifications dropdown">
+                            <span class="counter bgc-red">3</span>
+                            <a href="" class="dropdown-toggle no-after" data-toggle="dropdown">
+                                <i class="ti-bell"></i>
+                            </a>
+                        </li>
+                        <li class="notifications dropdown">
+                            <span class="counter bgc-blue">3</span>
+                            <a href="" class="dropdown-toggle no-after" data-toggle="dropdown">
+                                <i class="ti-email"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-toggle="dropdown">
+                                <div class="peer mR-10">
+                                    <img class="w-2r bdrs-50p" src="~/assets/static/images/Yo1.png" alt="">
+                                </div>
+                                <div class="peer">
+                                    <span class="fsz-sm c-grey-100">JCamilo Rpo</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ### $App Screen Content ### -->
+            <main class='main-content bgc-grey-100'>
+                <div id='mainContent'>
+                    @RenderBody()
+                </div>
+            </main>
+
+            <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
+                <span>Copyright © 2019 Designed by Juan Camilo Restrepo Velez. All rights reserved.</span>
+            </footer>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <script src="~/assets/vendor.js"></script>
+    <script src="~/assets/bundle.js"></script>
+    <script>
+        window.addEventListener('load', function load() {
+            const loader = document.getElementById('loader');
+            setTimeout(function () {
+                loader.classList.add('fadeOut');
+            }, 300);
+        });
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

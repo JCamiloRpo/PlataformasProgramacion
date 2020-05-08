@@ -1,0 +1,50 @@
+﻿@model InCuarenTime.Models.Producto
+
+@{
+    ViewData["Title"] = "Eliminar Producto";
+}
+
+<div class="masonry-item col-12">
+    <div class="bd bgc-white p-20">
+        <h4 class="c-grey-900">Eliminar Producto</h4>
+        <div class="mT-30">
+            <div class="row">
+                <div class="col-md-2 ">
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </div>
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.Nombre)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 ">
+                    @Html.DisplayNameFor(model => model.UnidadMedida)
+                </div>
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.UnidadMedida)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 ">
+                    @Html.DisplayNameFor(model => model.Estado)
+                </div>
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => model.Estado)
+                </div>
+            </div>
+            <br />
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <div class="peer">
+                    <a class="sidebar-link" asp-action="Index">
+                        <span class="icon-holder">
+                            <i class="c-deep-purple-500 ti-align-justify"></i>
+                        </span>
+                        <span class="title c-deep-purple-500 "> Volver a la lista </span>
+                    </a> |
+                    <button type="submit" value="Eliminar" class="btn cur-p btn-danger ti-trash"> Eliminar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

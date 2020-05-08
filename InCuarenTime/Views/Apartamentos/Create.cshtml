@@ -1,0 +1,64 @@
+﻿@model InCuarenTime.Models.Apartamento
+
+@{
+    ViewData["Title"] = "Nuevo Apartamento";
+}
+
+<div class="masonry-item col-12">
+    <div class="bd bgc-white p-20">
+        <h4 class="c-grey-900">Nuevo Apartamento</h4>
+        <div class="mT-30">
+            <form class="container" id="needs-validation" asp-action="Create">
+                <div class="row">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Numero" class="control-label"></label>
+                        <input asp-for="Numero" class="form-control" placeholder="Ej: 101" required />
+                        <span asp-validation-for="Numero" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Piso" class="control-label"></label>
+                        <input asp-for="Piso" class="form-control" placeholder="Ej: 1" required />
+                        <span asp-validation-for="Piso" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Bloque" class="control-label"></label>
+                        <input asp-for="Bloque" class="form-control" placeholder="Ej: B1" required />
+                        <span asp-validation-for="Bloque" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Unidad_ResidencialID" class="control-label"></label>
+                        <select asp-for="Unidad_ResidencialID" class="form-control" asp-items="ViewBag.Unidad_ResidencialID"></select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3 ">
+                        <div class="checkbox checkbox-circle checkbox-info peers ai-c mB-15">
+                            <input id="inputCall1" class="form-check-input" asp-for="Estado" />
+                            <label for="inputCall1" class="form-check-label">
+                                @Html.DisplayNameFor(model => model.Estado)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="peer">
+                    <button type="submit" value="Crear" class="btn cur-p btn-success ti-plus"> Crear</button>
+                </div>
+            </form>
+            <br />
+            <a class="sidebar-link" asp-action="Index">
+                <span class="icon-holder">
+                    <i class="c-deep-purple-500 ti-align-justify"></i>
+                </span>
+                <span class="title c-deep-purple-500 "> Volver a la lista </span>
+            </a>
+
+            @section Scripts {
+                @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+            }
+
+        </div>
+    </div>
+</div>

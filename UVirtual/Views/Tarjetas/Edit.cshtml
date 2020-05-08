@@ -1,0 +1,49 @@
+﻿@model UVirtual.Models.Tarjeta
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Tarjeta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="PersonajeID" class="control-label"></label>
+                <select asp-for="PersonajeID" class="form-control" asp-items="ViewBag.PersonajeID"></select>
+                <span asp-validation-for="PersonajeID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SituacionID" class="control-label"></label>
+                <select asp-for="SituacionID" class="form-control" asp-items="ViewBag.SituacionID"></select>
+                <span asp-validation-for="SituacionID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RespuestaID" class="control-label"></label>
+                <select asp-for="RespuestaID" class="form-control" asp-items="ViewBag.RespuestaID"></select>
+                <span asp-validation-for="RespuestaID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Respuesta2ID" class="control-label"></label>
+                <select asp-for="Respuesta2ID" class="form-control" asp-items="ViewBag.Respuesta2ID"></select>
+                <span asp-validation-for="Respuesta2ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

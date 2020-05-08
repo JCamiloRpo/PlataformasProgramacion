@@ -1,0 +1,59 @@
+﻿@model InCuarenTime.Models.Compra
+
+@{
+    ViewData["Title"] = "Editar Compra";
+}
+
+<div class="masonry-item col-12">
+    <div class="bd bgc-white p-20">
+        <h4 class="c-grey-900">Editar Compra</h4>
+        <div class="mT-30">
+            <form class="container" id="needs-validation" asp-action="Edit">
+                <div class="row">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="MercadoID" class="control-label"></label>
+                        <select asp-for="MercadoID" class="form-control" asp-items="ViewBag.MercadoID"></select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="ProductoID" class="control-label"></label>
+                        <select asp-for="ProductoID" class="form-control" asp-items="ViewBag.ProductoID"></select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Cantidad" class="control-label"></label>
+                        <input asp-for="Cantidad" class="form-control" placeholder="Ej: 5" required />
+                        <span asp-validation-for="Cantidad" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3 ">
+                        <div class="checkbox checkbox-circle checkbox-info peers ai-c mB-15">
+                            <input id="inputCall1" class="form-check-input" asp-for="Estado" />
+                            <label for="inputCall1" class="form-check-label">
+                                @Html.DisplayNameFor(model => model.Estado)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="peer">
+                    <button type="submit" value="Crear" class="btn cur-p btn-warning ti-pencil"> Guardar</button>
+                </div>
+            </form>
+            <br />
+            <a class="sidebar-link" asp-action="Index">
+                <span class="icon-holder">
+                    <i class="c-deep-purple-500 ti-align-justify"></i>
+                </span>
+                <span class="title c-deep-purple-500 "> Volver a la lista </span>
+            </a>
+
+            @section Scripts {
+                @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+            }
+
+        </div>
+    </div>
+</div>

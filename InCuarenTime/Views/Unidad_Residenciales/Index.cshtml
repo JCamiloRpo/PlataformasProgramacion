@@ -1,0 +1,88 @@
+﻿@model IEnumerable<InCuarenTime.Models.Unidad_Residencial>
+
+@{
+    ViewData["Title"] = "Unidades Residenciales";
+}
+
+
+<div class="container-fluid">
+    <h4 class="c-grey-900 mT-10 mB-30 ">Unidades Residenciales</h4>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="bgc-white bd bdrs-3 p-20 mB-20">
+                <h4 class="c-grey-900 mB-20">Lista de Unidades Residenciales</h4>
+                <a class="sidebar-link" asp-action="Create">
+                    <span class="icon-holder">
+                        <i class="c-deep-purple-500 ti-plus"></i>
+                    </span>
+                    <span class="title c-deep-purple-500 "> Nuevo registro </span>
+                </a>
+                <br /><br />
+                <table id="dataTable" class="table table-bordered table-dark " cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Nombre)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Direccion)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Telefono)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Ciudad)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Estado)
+                            </th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-dark">
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Direccion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Telefono)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Ciudad.Nombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Estado)
+                                </td>
+                                <td>
+                                    <a class="sidebar-link" asp-action="Edit" asp-route-id="@item.Id">
+                                        <span class="icon-holder">
+                                            <i class="c-purple-500 ti-pencil"></i>
+                                        </span>
+                                        <span class="title c-purple-500 ">Editar</span>
+                                    </a> |
+                                    <a class="sidebar-link" asp-action="Details" asp-route-id="@item.Id">
+                                        <span class="icon-holder">
+                                            <i class="c-blue-500 ti-info"></i>
+                                        </span>
+                                        <span class="title c-blue-500 ">Detalles</span>
+                                    </a> |
+                                    <a class="sidebar-link" asp-action="Delete" asp-route-id="@item.Id">
+                                        <span class="icon-holder">
+                                            <i class="c-pink-500 ti-trash"></i>
+                                        </span>
+                                        <span class="title c-pink-500 ">Eliminar</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
